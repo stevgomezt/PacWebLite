@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<title>Perfilamiento analítico del colaborador</title>
+
+	<!-- Estilos CSS -->
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<link rel="stylesheet" href="assets/css/owl.carousel.min.css" />
+	<link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="assets/css/style.css" />
+	<link rel="stylesheet" href="assets/css/noscript.css" />
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="assets/fonts/icomoon/style.css" />
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet" />
+</head>
+
+<body class="is-preload">
+	<!-- Sidebar -->
+	<section id="sidebar">
+		<div class="inner">
+			<div>
+				<img src="/assets/css/images/icono.png" alt="" class="icono-emergia" />
+			</div>
+			<nav>
+				<ul>
+					<li><a href="#intro">Inicio PAC</a></li>
+					<li><a href="#one">Registro de colaborador</a></li>
+					<li><a href="#two">Adjuntar perfil conductual</a></li>
+					<!-- <li><a href="#three">Tabla de colaboradores</a></li> -->
+					<li><a href="table.html#three" class="scrolly active">Resultado</a></li>
+				</ul>
+			</nav>
+		</div>
+	</section>
+
+	<!-- Wrapper -->
+	<div id="wrapper">
+		<!-- Intro -->
+		<section id="intro" class="wrapper fullscreen style1 fade-up">
+			<div class="inner">
+				<h1>Perfilamiento analitico del colaborador</h1>
+				<p>
+					Herramienta desarrollada con inteligencia artificial
+					para apoyar los procesos de reclutamiento y selección,
+					identificando los perfiles idóneos por tipología de
+					negocio, mitigando la rotación y elevando el performance
+					de las operaciones.
+				</p>
+				<ul class="actions">
+					<li>
+						<a href="#one" class="button scrolly">Registrar colaborador</a>
+					</li>
+				</ul>
+			</div>
+		</section>
+
+		<!-- One -->
+		<section id="one" class="wrapper fullscreen style2">
+			<div class="content">
+				<div class="inner">
+					<form id="msform">
+						<ul id="progressbar">
+							<li class="active">
+								<p>Información Personal</p>
+							</li>
+							<li>
+								<p>Información de Contacto</p>
+							</li>
+							<li>
+								<p>Experiencia Laboral</p>
+							</li>
+						</ul>
+						<fieldset id="fieldset1">
+							<div class="row">
+								<div class="col-md col-lg col-sm">
+									<div class="form-group">
+										<label class="label-titles" for="numero_documento">Documento de
+											identificación:</label>
+										<div class="input-container">
+											<input type="text" class="form-control" name="numero_documento"
+												pattern="[0-9]*" minlength="1" maxlength="10"
+												title="Confirme los 10 dígitos"
+												placeholder="Campo numérico de 10 dígitos" required />
+											<div class="icons-form"></div>
+											<div class="validation-message"></div>
+										</div>
+									</div>
+
+									<div class="form-group">
+										<label class="label-titles" for="nombre">Nombre y apellidos:</label>
+										<div class="input-container">
+											<input type="text" class="form-control" name="nombre" pattern="[A-Za-z\s]*"
+												oninput="this.value = this.value.replace(/[0-9]/g, '')"
+												title="Solo letras y espacios en blanco"
+												placeholder="Ingrese su nombre completo" required />
+											<div class="icons-form"></div>
+											<div class="validation-message"></div>
+										</div>
+									</div>
+
+									<div class="form-group">
+										<label class="label-titles" for="edad">Edad:</label>
+										<div class="input-container">
+											<input type="text" class="form-control" name="edad" pattern="[0-9]{2}"
+												title="" placeholder="Campo numérico de 2 dígitos" required />
+											<div class="icons-form"></div>
+											<div class="validation-message"></div>
+										</div>
+									</div>
+								</div>
+
+								<div class="col-md col-lg col-sm">
+									<div class="form-group">
+										<label class="label-titles" for="genero">Género:</label>
+										<div class="input-container">
+											<select class="form-control" name="genero" id="genero" required>
+												<option value="" disabled selected></option>
+												<option value="masculino">Masculino</option>
+												<option value="femenino">Femenino</option>
+											</select>
+											<div class="icons-form"></div>
+											<div class="validation-message"></div>
+										</div>
+									</div>
+
+									<div class="form-group">
+										<label class="label-titles" for="estado_civil">Estado civil:</label>
+										<div class="input-container">
+											<select class="form-control" name="estado_civil" id="estado_civil" required>
+												<option value="" disabled selected></option>
+												<option value="soltero">Soltero/a</option>
+												<option value="casado">Casado/a</option>
+												<option value="divorciado">Divorciado/a</option>
+												<option value="viudo">Viudo/a</option>
+											</select>
+											<div class="icons-form"></div>
+											<div class="validation-message"></div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<input type="button" name="next" class="next action-button" value="Siguiente" id="next1" />
+						</fieldset>
+
+						<fieldset id="fieldset2">
+							<div class="row">
+								<div class="col-md col-lg col-sm">
+									<label class="label-titles" for="email">Correo electrónico:</label>
+									<div class="input-container">
+										<div class="form-group">
+											<input type="email" class="form-control" name="correo"
+												placeholder="ejemplo@ejemplo.com" required />
+											<div class="icons-form"></div>
+											<div class="validation-message"></div>
+										</div>
+									</div>
+
+									<div class="form-group">
+										<label class="label-titles" for="telefono">Número de celular:</label>
+										<div class="input-container">
+											<input type="text" class="form-control" name="telefono" pattern="[0-9]{10}"
+												title="Confirme los 10 dígitos"
+												placeholder="Campo numérico de 10 dígitos" required />
+											<div class="icons-form"></div>
+											<div class="validation-message"></div>
+										</div>
+									</div>
+
+									<div class="form-group">
+										<label class="label-titles" for="nivel_estudios">Nivel de estudios:</label>
+										<div class="input-container">
+											<select class="form-control" name="nivel_estudios" id="nivel_estudios"
+												required>
+												<option value="" disabled selected></option>
+												<option value="bachillerato">Bachillerato</option>
+												<option value="tecnico">Técnico</option>
+												<option value="tecnologo">Tecnólogo</option>
+												<option value="universitario">Universitario</option>
+											</select>
+											<div class="icons-form"></div>
+											<div class="validation-message"></div>
+										</div>
+									</div>
+								</div>
+
+								<div class="col-md col-lg col-sm">
+									<div class="form-group">
+										<label class="label-titles" for="estrato">Estrato:</label>
+										<div class="input-container">
+											<select class="form-control" name="estrato" id="estrato" required>
+												<option value="" disabled selected></option>
+												<option value="1">1</option>
+												<option value="2">2</option>
+												<option value="3">3</option>
+												<option value="4">4</option>
+												<option value="5">5</option>
+												<option value="6">6</option>
+											</select>
+											<div class="icons-form"></div>
+											<div class="validation-message"></div>
+										</div>
+									</div>
+
+									<div class="form-group">
+										<label class="label-titles" for="num_hijos">Número de hijos:</label>
+										<div class="input-container">
+											<input type="number" class="form-control" name="num_hijos" id="num_hijos"
+												max="99" placeholder="Campo numérico" required />
+											<div class="icons-form"></div>
+											<div class="validation-message"></div>
+										</div>
+									</div>
+
+									<div class="form-group">
+										<label class="label-titles" for="personas_cargo">Personas a cargo:</label>
+										<div class="input-container">
+											<input type="number" class="form-control" name="personas_cargo"
+												id="personas_cargo" max="99" placeholder="Campo numérico" required />
+											<div class="icons-form"></div>
+											<div class="validation-message"></div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<input type="button" name="previous" class="previous action-button" value="Anterior" />
+							<input type="button" name="next" class="next action-button" value="Siguiente" id="next2" />
+						</fieldset>
+
+						<fieldset id="fieldset3">
+							<div class="row">
+								<div class="col-md col-lg col-sm">
+									<div class="form-group">
+										<label class="label-titles" for="experiencia">Años de experiencia:</label>
+										<div class="input-container">
+											<select class="form-control" name="experiencia" id="experiencia" required>
+												<option value="" disabled selected></option>
+												<option value="0">0</option>
+												<option value="1">1</option>
+												<option value="2">2</option>
+												<option value="3">3</option>
+												<option value="4">4</option>
+												<option value="5">5</option>
+											</select>
+											<div class="icons-form"></div>
+											<div class="validation-message"></div>
+										</div>
+									</div>
+
+									<div class="form-group">
+										<label class="label-titles" for="area_experiencia">Área de experiencia:</label>
+										<div class="input-container">
+											<select class="form-control" name="area_experiencia" id="area_experiencia"
+												required>
+												<option value="" disabled selected></option>
+												<option value="bo">BO</option>
+												<option value="cobranza">Cobranza</option>
+												<option value="retencion">Retención</option>
+												<option value="servicio al cliente">Servicio al cliente</option>
+												<option value="venta cruzada">Venta cruzada</option>
+												<option value="ventas">Ventas</option>
+											</select>
+											<div class="icons-form"></div>
+											<div class="validation-message"></div>
+										</div>
+									</div>
+
+									<div class="form-group">
+										<label class="label-titles" for="tiempo_ventas">Tiempo de experiencia en
+											ventas:</label>
+										<div class="input-container">
+											<select class="form-control" name="tiempo_ventas" id="tiempo_ventas"
+												required>
+												<option value="" disabled selected></option>
+												<option value="0">0</option>
+												<option value="1">1</option>
+												<option value="2">2</option>
+												<option value="3">3</option>
+												<option value="4">4</option>
+												<option value="5">5</option>
+											</select>
+											<div class="icons-form"></div>
+											<div class="validation-message"></div>
+										</div>
+									</div>
+								</div>
+
+								<div class="col-md col-lg col-sm">
+									<div class="form-group">
+										<label class="label-titles" for="experiencia_general">Experiencia
+											general:</label>
+										<div class="input-container">
+											<select class="form-control" name="experiencia_general"
+												id="experiencia_general" required>
+												<option value="" disabled selected></option>
+												<option value="0">0</option>
+												<option value="1">1</option>
+												<option value="2">2</option>
+												<option value="3">3</option>
+												<option value="4">4</option>
+												<option value="5">5</option>
+											</select>
+											<div class="icons-form"></div>
+											<div class="validation-message"></div>
+										</div>
+									</div>
+
+									<div class="form-group">
+										<label class="label-titles" for="otra_area_experiencia">Otra área de
+											experiencia:</label>
+										<div class="input-container">
+											<select class="form-control" name="otra_area_experiencia"
+												id="otra_area_experiencia" required>
+												<option value="" disabled selected></option>
+												<option value="areas administrativas">
+													Áreas administrativas
+												</option>
+												<option value="servicio al cliente presencial">
+													Servicio al cliente presencial
+												</option>
+												<option value="venta al cliente presencial">
+													Venta al cliente presencial
+												</option>
+												<option value="otros">Otros</option>
+											</select>
+											<div class="icons-form"></div>
+											<div class="validation-message"></div>
+										</div>
+									</div>
+
+									<!-- <div class="form-group">
+										<label class="label-titles" for="pda_color">PDA color:</label>
+										<div class="input-container">
+											<select class="form-control select" name="pda_color" id="pda_color"
+												required>
+												<option value="" disabled selected></option>
+												<option value="amarillo">Amarillo</option>
+												<option value="amarillo y/o azul">Amarillo y/o Azul</option>
+												<option value="amarillo y/o rojo">Amarillo y/o Rojo</option>
+												<option value="amarillo y/o verde">Amarillo y/o Verde</option>
+												<option value="azul">Azul</option>
+												<option value="azul y/o amarillo">Azul y/o Amarillo</option>
+												<option value="azul y/o rojo">Azul y/o Rojo</option>
+												<option value="azul y/o verde">Azul y/o Verde</option>
+												<option value="verde">Verde</option>
+												<option value="verde y/o azul">Verde y/o Azul</option>
+												<option value="verde y/o rojo">Verde y/o Rojo</option>
+											</select>
+											<div class="icons-form"></div>
+											<div class="validation-message"></div>
+										</div>
+									</div> -->
+								</div>
+							</div>
+
+							<input type="button" name="previous" class="previous action-button" value="Anterior" />
+							<button class="button-save" id="btnsave"
+								style="opacity: 0.5;-moz-appearance: none;-webkit-appearance: none;-ms-appearance: none;appearance: none;-moz-transition: border-color 0.2s ease;-webkit-transition: border-color 0.2s ease;-ms-transition: border-color 0.2s ease;transition: border-color 0.2s ease;background-color: #ff9e18;border: solid 1px !important;border-color: rgba(255, 255, 255, 0.15) !important;border-radius: 3em;color: #ffffff !important;cursor: pointer;display: inline-block;font-size: 0.6em;font-weight: bold;height: calc(4.75em + 2px);letter-spacing: 0.25em;line-height: 4.75em;outline: 0;padding: 0 3.75em;position: relative;text-align: center;text-decoration: none;text-transform: uppercase;white-space: nowrap;">
+								<a href="table.html#tree"
+									style="-moz-appearance: none;-webkit-appearance: none;-ms-appearance: none;appearance: none;-moz-transition: border-color 0.2s ease;-webkit-transition: border-color 0.2s ease;-ms-transition: border-color 0.2s ease;transition: border-color 0.2s ease;border: solid 1px !important;border-color: transparent !important;color: #ffffff !important;cursor: pointer;display: inline-block;font-weight: bold;height: calc(4.75em + 2px);letter-spacing: 0.25em;line-height: 4.75em;outline: 0;">Resultados</a>
+							</button>
+						</fieldset>
+					</form>
+				</div>
+			</div>
+		</section>
+
+		<!-- Two -->
+		<section id="two" class="wrapper fullscreen style3">
+			<div class="inner">
+				<h2>
+					Adjuntar Reporte de Perfil Conductual (Personal Development Analysis - PDA)
+				</h2>
+				<section class="features">
+					<div class="cargar-archivo">
+						<span class="icon solid major fa-desktop"></span>
+						<!-- <h3>Seleccione el archivo que desea procesar</h3> -->
+					</div>
+
+					<div class="file-input-container">
+						<label for="fileInput" class="custom-file-button">Seleccionar archivo</label>
+						<input type="file" id="fileInput" class="hidden" />
+						<a href="table.html#three" id="submit-link">
+							<input type="submit" value="Resultado">
+						</a>
+					</div>
+				</section>
+			</div>
+		</section>
+	</div>
+
+	<!-- Footer -->
+	<footer id="footer" class="wrapper style1-alt">
+		<div class="inner">
+			<ul class="menu">
+				<li>&copy; Perfilamiento analitico del colaborador.</li>
+			</ul>
+		</div>
+	</footer>
+
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery.scrollex.min.js"></script>
+	<script src="assets/js/jquery.scrolly.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+	<script src="assets/js/jquery-3.3.1.min.js"></script>
+	<script src="assets/js/popper.min.js"></script>
+	<script src="assets/js/bootstrap.min.js"></script>
+	<script src="assets/js/icon.js"></script>
+
+</body>
+
+</html>
