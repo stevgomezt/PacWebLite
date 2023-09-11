@@ -360,8 +360,8 @@
 							<input type="button" name="previous" class="previous action-button" value="Anterior" />
 							<button class="button-save" id="btnsave"
 								style="opacity: 0.5;-moz-appearance: none;-webkit-appearance: none;-ms-appearance: none;appearance: none;-moz-transition: border-color 0.2s ease;-webkit-transition: border-color 0.2s ease;-ms-transition: border-color 0.2s ease;transition: border-color 0.2s ease;background-color: #ff9e18;border: solid 1px !important;border-color: rgba(255, 255, 255, 0.15) !important;border-radius: 3em;color: #ffffff !important;cursor: pointer;display: inline-block;font-size: 0.6em;font-weight: bold;height: calc(4.75em + 2px);letter-spacing: 0.25em;line-height: 4.75em;outline: 0;padding: 0 3.75em;position: relative;text-align: center;text-decoration: none;text-transform: uppercase;white-space: nowrap;">
-								<a href="table.html#tree"
-									style="-moz-appearance: none;-webkit-appearance: none;-ms-appearance: none;appearance: none;-moz-transition: border-color 0.2s ease;-webkit-transition: border-color 0.2s ease;-ms-transition: border-color 0.2s ease;transition: border-color 0.2s ease;border: solid 1px !important;border-color: transparent !important;color: #ffffff !important;cursor: pointer;display: inline-block;font-weight: bold;height: calc(4.75em + 2px);letter-spacing: 0.25em;line-height: 4.75em;outline: 0;">Resultados</a>
+								<a href="#two"
+									style="-moz-appearance: none;-webkit-appearance: none;-ms-appearance: none;appearance: none;-moz-transition: border-color 0.2s ease;-webkit-transition: border-color 0.2s ease;-ms-transition: border-color 0.2s ease;transition: border-color 0.2s ease;border: solid 1px !important;border-color: transparent !important;color: #ffffff !important;cursor: pointer;display: inline-block;font-weight: bold;height: calc(4.75em + 2px);letter-spacing: 0.25em;line-height: 4.75em;outline: 0;">Adjuntar Reporte de Perfil Conductual</a>
 							</button>
 						</fieldset>
 					</form>
@@ -383,9 +383,10 @@
 
 					<div class="file-input-container">
 						<label for="fileInput" class="custom-file-button">Seleccionar archivo</label>
-						<input type="file" id="fileInput" class="hidden" />
-						<a href="table.html#three" id="submit-link">
-							<input type="submit" value="Resultado">
+						<input type="file" id="fileInput" class="hidden" onchange="displayFileName(this)" />
+						<p id="file-name-text" style="display: none;"></p>
+						<a href="table.html#three" id="submit-link" style="opacity: 0; visibility: hidden;">
+							<input type="submit" value="Resultado" id="submit-button" style="margin-bottom: 10px;"/>
 						</a>
 					</div>
 				</section>

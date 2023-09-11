@@ -320,3 +320,25 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 });
+
+function displayFileName(input) {
+    const fileText = document.getElementById("file-name-text");
+    const submitButton = document.getElementById("submit-button");
+    const submitLink = document.getElementById("submit-link");
+
+    if (input.files.length > 0) {
+        const fileName = input.files[0].name;
+        fileText.textContent = `Archivo seleccionado: ${fileName}`;
+        fileText.style.display = "block";
+        submitButton.style.opacity = "1";
+        submitButton.style.visibility = "visible";
+        submitLink.style.opacity = "1"; // Hacer visible el enlace
+        submitLink.style.visibility = "visible"; // Hacer visible el enlace
+    } else {
+        fileText.style.display = "none";
+        submitButton.style.opacity = "0";
+        submitButton.style.visibility = "hidden";
+        submitLink.style.opacity = "0"; // Ocultar el enlace
+        submitLink.style.visibility = "hidden"; // Ocultar el enlace
+    }
+}
